@@ -74,6 +74,13 @@ class SsdbClient(object):
         """
         self.__conn.hdel(self.name, key)
 
+    def deleteAll(self):
+        """
+        :param keys:
+        :return:
+        """
+        self.__conn.delete(self.name)
+
     def update(self, key, value):
         self.__conn.hincrby(self.name, key, value)
 

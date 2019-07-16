@@ -80,6 +80,15 @@ class ProxyManager(object):
         self.db.changeTable(self.useful_proxy_queue)
         self.db.delete(proxy)
 
+    def deleteAll(self):
+        """
+        delete proxy from pool
+        :param proxy:
+        :return:
+        """
+        self.db.changeTable(self.useful_proxy_queue)
+        self.db.deleteAll()
+
     def getAll(self):
         """
         get all proxy from pool as list

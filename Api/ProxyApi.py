@@ -41,6 +41,7 @@ api_list = {
     # 'refresh': u'refresh proxy pool',
     'get_all': u'get all proxy from proxy pool',
     'delete?proxy=127.0.0.1:8080': u'delete an unable proxy',
+    'deleteAll': u'delete All proxy',
     'get_status': u'proxy statistics'
 }
 
@@ -76,6 +77,10 @@ def delete():
     ProxyManager().delete(proxy)
     return 'success'
 
+@app.route('/deleteAll/', methods=['POST'])
+def deleteAll():
+    ProxyManager().deleteAll()
+    return 'success'
 
 @app.route('/get_status/')
 def getStatus():

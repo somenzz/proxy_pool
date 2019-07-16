@@ -98,6 +98,9 @@ class DbClient(object):
     def getAll(self):
         return self.client.getAll()
 
+    def deleteAll(self):
+        return self.client.deleteAll()
+
     def changeTable(self, name):
         self.client.changeTable(name)
 

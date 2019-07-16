@@ -87,6 +87,15 @@ class RedisClient(object):
         self.__conn.hdel(self.name, key)
         # self.__conn.srem(self.name, value)
 
+    def deleteAll(self):
+        """
+        delete all items
+        :param
+        :return:
+        """
+        self.__conn.delete(self.name)
+
+
     def inckey(self, key, value):
         self.__conn.hincrby(self.name, key, value)
 
@@ -108,7 +117,7 @@ class RedisClient(object):
 
 
 if __name__ == '__main__':
-    redis_con = RedisClient('proxy', 'localhost', 6379)
+    redis_con = RedisClient('proxy', 'localhost', 6379, '')
     # redis_con.put('abc')
     # redis_con.put('123')
     # redis_con.put('123.115.235.221:8800')
@@ -118,8 +127,8 @@ if __name__ == '__main__':
     # print(redis_con.getAll())
 
     # print(redis_con.getAll())
-    redis_con.changeTable('raw_proxy')
-    redis_con.pop()
+    # redis_con.changeTable('raw_proxy')
+    # redis_con.pop()
 
     # redis_con.put('132.112.43.221:8888')
     # redis_con.changeTable('proxy')

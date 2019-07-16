@@ -57,9 +57,9 @@ PROXY_GETTER = [
     "freeProxyEleven",
     "freeProxyTwelve",
     # foreign website, outside the wall
-    # "freeProxyWallFirst",
-    # "freeProxyWallSecond",
-    # "freeProxyWallThird"
+    "freeProxyWallFirst",
+    "freeProxyWallSecond",
+    "freeProxyWallThird"
 ]
 
 # # API config http://127.0.0.1:5010

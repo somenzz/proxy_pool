@@ -122,6 +122,7 @@ docker run -it --rm -v $(pwd):/usr/src/app -p 5010:5010 proxy_pool
 | /get_all | GET | 获取所有代理 |None|
 | /get_status | GET | 查看代理数量 |None|
 | /delete | GET | 删除代理  |proxy=host:ip|
+| /deleteAll | POST | 删除所有代理  |None|
 
 * 爬虫使用
 
